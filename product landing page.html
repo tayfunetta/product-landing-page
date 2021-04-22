@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <title>product landing page</title>
+    <style>
+        body{
+            margin: 0;
+            height: 2000px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        #header{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            background-color: #eee;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            border-bottom: 5px solid white;
+        }
+        #image-div{
+            width: 15%;
+            margin: 1rem;
+            margin:auto 1rem;
+        }
+        #image-div img{
+            width: 90%;
+            height: auto;
+            margin: auto;
+            padding: 0.5rem;
+        }
+        #nav-bar{
+            margin: auto 1px;
+        }
+        #nav-bar ul{
+            display: flex;
+        }
+        #nav-bar ul li{
+            margin: 1rem 1rem;
+            list-style-type: none;
+            font-weight: 400;
+        }
+        #nav-bar ul li a{
+            text-decoration: none;
+            color: black;
+        }
+        
+        #section-main{
+            width: 50%;
+            margin:30vmin auto;
+            text-align: center;
+        }
+        #section-main h1{
+            font-weight: 500;
+        }
+        #email{
+            width: 60%;
+            height: 1.5rem;
+            margin-bottom:1rem;
+        }
+        #submit{
+            width: 60%;
+            height: 3rem;
+            background-color: #111;
+            color: white;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        #section-extras{
+            width: 60%;
+            margin:30vmin auto;
+            text-align: center;
+        }
+        #grid-container{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 2fr 5fr;
+            grid-template-rows: 10fr 10fr 10fr;
+            grid-gap: 3rem;
+            grid-template-areas:
+            "icon1 content1"
+            "icon2 content2"
+            "icon3 content3"
+            ;
+        }
+        .text{
+            text-align:start;
+            line-height: 25px;
+        }
+        
+        #icon1{
+            grid-area: icon3;
+            justify-self: center;
+            align-self: center;
+        }
+        #icon2{
+            grid-area:icon2;
+            justify-self: center;
+            align-self: center;
+        }
+        #icon3{
+            grid-area:icon1;
+            justify-self: center;
+            align-self: center;
+        }
+
+        #section-video{
+            max-width: 550px;
+            height: auto;
+            margin: auto;
+            text-align: center;
+        }
+        #video{
+            width: 100%;
+        }
+        #section-products{
+            width: 90%;
+            margin: 10rem auto;
+        }
+        #product-container{
+            display:flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        .product{
+            margin: 2rem;
+            width: 15rem;
+            height: 20rem;
+            border: 1px solid black;
+        }
+        .product-header{
+            text-align: center;
+            background: #eee;
+            padding: 0.5rem;
+        }
+        .product-header h3{
+            font-weight: 400;
+        }
+        .product-text{
+            text-align: center;
+            line-height: 30px;
+            padding: 1rem;
+        }
+
+        .product-button{
+            margin: 0.6rem auto;
+            text-align: center;
+        }
+        .product-button button{
+            width: 6.5rem;
+            height: 3rem;
+            background: black;
+            color: white;
+            font-size: 1rem;
+        }
+        .product-button button:hover{
+            border: 1px solid black;
+            color: black;
+            background-color: white;
+        }
+
+        footer{
+            width: 100%;
+            background-color: #eee;
+            height: 10rem;
+        }
+        footer #p1{
+            padding:2rem 1rem;
+            text-align: end;
+        }
+        footer #p2{
+            text-align: end;
+        }
+        footer #p2 a{
+            margin: 0px 1rem;
+            text-decoration: none;
+            
+        }
+        @media(max-width:750px){
+            #section-extras, #section-video{
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div id="image-div">
+            <img id="header-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/WD-40_Company_logo.svg/1024px-WD-40_Company_logo.svg.png" alt="Brand logo">
+        </div>
+
+        <nav id="nav-bar">
+        <ul>
+            <li><a href="#section-main" class="nav-link">Main</a></li>
+            <li><a href="#section-extras" class="nav-link">Extras</a></li>
+            <li><a href="#section-video" class="nav-link">Videos</a></li>
+            <li><a href="#section-products" class="nav-link">Products</a></li>
+        </ul>
+        </nav>
+    </header>
+    <section id="section-main">
+        <h1>Handcrafted, home made masterpieces</h1>
+    <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <input type="email" id="email" name="email" placeholder="enter your email here"><br>
+            <input type="submit" value="GET STARTED" id="submit">
+    </form>
+    </section>
+
+    <section id="section-extras">
+        <div id="grid-container">
+            <i id="icon1" class="fas fa-battery-three-quarters fa-5x"></i>
+            <p id="text1" class="text"><strong>High Quality Materials</strong><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam corrupti commodi temporibus saepe, mollitia optio ad hic qui perspiciatis tempora.</p>
+            
+            <i id="icon2" class="fas fa-truck fa-5x"></i>
+            <p id="text2" class="text"><strong>Free Fast Delivery</strong><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam corrupti commodi temporibus saepe, mollitia optio ad hic qui perspiciatis tempora.</p>
+            
+            <i id="icon3" class="fas fa-fire fa-6x"></i>
+            <p id="text3" class="text"><strong>Long Lifetime with 3 Years Guarantee</strong><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam corrupti commodi temporibus saepe, mollitia optio ad hic qui perspiciatis tempora.</p>
+        </div>
+    </section>
+
+    <section id="section-video">
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/lcJH8JtgZoE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+    <section id="section-products">
+        <div id="product-container">
+            <div class="product">
+                <div class="product-header"><h3>PRODUCT ONE</h3></div>
+                <div class="product-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, repellat.<br><strong>€500</strong></div>
+                <div class="product-button"><button>SELECT</button></div>
+            </div>
+            <div class="product">
+                <div class="product-header"><h3>PRODUCT TWO</h3></div>
+                <div class="product-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, repellat.<br><strong>€600</strong></div>
+                <div class="product-button"><button>SELECT</button></div>
+            </div>
+            <div class="product">
+                <div class="product-header"><h3>PRODUCT THREE</h3></div>
+                <div class="product-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, repellat.<br><strong>€700</strong></div>
+                <div class="product-button"><button>SELECT</button></div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p id="p1">Something about us</p>
+        <p id="p2"><a href="#">Contact</a><a href="#">Privacy</a><a href="#">Terms</a></p>
+    </footer>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
